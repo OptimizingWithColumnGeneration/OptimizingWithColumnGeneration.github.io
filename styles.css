@@ -59,7 +59,8 @@ footer {
     display: inline-block;
     padding: 0.75em 1.5em;
     margin: 0.5em;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: bold; 
     color: #f4f4f4;
     background-color: #02494a;
     border: none;
