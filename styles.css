@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Matches the white background color */
     color: #333;
     line-height: 1.6;
 }
@@ -10,28 +10,31 @@ body {
 header {
     text-align: center;
     padding: 1em 0;
-    background-color: #00539CFF;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4; /* Matches the white background color */
+    color: #333;
+    position: relative;
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
-.book-cover {
-    max-width: 100px;
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; /* Adjust the width as needed */
     height: auto;
-    margin-bottom: 1em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 1.8em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
     margin: 0;
+    z-index: 1;
 }
 
 main {
@@ -50,12 +53,12 @@ section {
 }
 
 section h2 {
-    color: #00539CFF;
+    color: #333;
     margin-top: 0;
 }
 
 a {
-    color: #007acc;
+    color: #333;
     text-decoration: none;
 }
 
@@ -67,7 +70,7 @@ footer {
     text-align: center;
     padding: 1em 0;
     background-color: #333;
-    color: #fff;
+    color: #f4f4f4;
 }
 
 .btn {
@@ -75,8 +78,8 @@ footer {
     padding: 0.75em 1.5em;
     margin: 0.5em;
     font-size: 1em;
-    color: #fff;
-    background-color: #007acc;
+    color: #f4f4f4;
+    background-color: #333;
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -85,5 +88,5 @@ footer {
 }
 
 .btn:hover {
-    background-color: #00539CFF;
+    background-color: #555;
 }
