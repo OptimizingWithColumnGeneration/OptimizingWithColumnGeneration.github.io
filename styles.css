@@ -39,12 +39,12 @@ section h2 {
 }
 
 a {
-    color: #147e80;
+    color:  #f4f4f4;
     text-decoration: none;
 }
 
 a:hover {
-    color: #42a4a6;
+    color: #f4f4f4;
     text-decoration: underline;
 }
 
@@ -70,5 +70,5 @@ footer {
 }
 
 .btn:hover {
-    background-color: #555;
+    background-color: #147e80;
 }
