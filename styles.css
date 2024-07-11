@@ -1,8 +1,8 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Matches the white background color */
+    background-color: #fff; /* Inverted to white */
     color: #333;
     line-height: 1.6;
 }
@@ -10,8 +10,8 @@ body {
 header {
     text-align: center;
     padding: 1em 0;
-    background-color: #f4f4f4; /* Matches the white background color */
-    color: #333;
+    background-color: #333; /* Inverted to dark gray */
+    color: #f4f4f4;
     position: relative;
 }
 
@@ -30,11 +30,20 @@ header {
     height: auto;
 }
 
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    margin: 0;
+.title {
     z-index: 1;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2em;
+    margin: 0.2em 0;
+}
+
+.title h2 {
+    font-size: 1em;
+    margin: 0.2em 0;
+    font-weight: 400;
 }
 
 main {
@@ -44,7 +53,7 @@ main {
 }
 
 section {
-    background-color: #fff;
+    background-color: #f4f4f4; /* Inverted to light gray */
     margin: 1em 0;
     padding: 1.5em;
     border-radius: 8px;
