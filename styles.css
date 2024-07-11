@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
-    color: #333;
+    color: #02494a;
     line-height: 1.6;
 }
 
@@ -34,23 +34,24 @@ section {
 }
 
 section h2 {
-    color: #333;
+    color: #02494a;
     margin-top: 0;
 }
 
 a {
-    color: #333;
+    color: #147e80;
     text-decoration: none;
 }
 
 a:hover {
+    color: #42a4a6;
     text-decoration: underline;
 }
 
 footer {
     text-align: center;
     padding: 1em 0;
-    background-color: #333;
+    background-color: #02494a;
     color: #f4f4f4;
 }
 
@@ -60,7 +61,7 @@ footer {
     margin: 0.5em;
     font-size: 1em;
     color: #f4f4f4;
-    background-color: #333;
+    background-color: #02494a;
     border: none;
     border-radius: 5px;
     text-align: center;
