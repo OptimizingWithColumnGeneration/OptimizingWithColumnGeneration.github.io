@@ -77,7 +77,7 @@ footer {
 .header-content {
     display: flex;
     align-items: flex-end; /* Align the text with the bottom of the image */
-    padding: 1em; /* Optional: Adds some padding around the content */
+    padding: 10em; /* Optional: Adds some padding around the content */
     font-size: 1.2em;
     font-weight: bold; 
     letter-spacing: 0.05em;
