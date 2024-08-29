@@ -14,7 +14,7 @@ header {
 }
 
 .book-cover {
-    height: 350px;
+    max-width: 350px;
 }
 
 main {
@@ -73,10 +73,11 @@ footer {
 .btn:hover {
     background-color: #147e80;
 }
+
 .header-content {
     display: flex;
     align-items: flex-end; /* Align the text with the bottom of the image */
-    padding: 10em; /* Optional: Adds some padding around the content */
+    padding: 1em; /* Optional: Adds some padding around the content */
     font-size: 1.2em;
     font-weight: bold; 
     letter-spacing: 0.05em;
@@ -85,7 +86,9 @@ footer {
 }
 
 .header-content img {
-    margin-right: 15em; /* Adds some space between the image and the text */
+    margin-left: 5em; 
+    margin-right: 5em; /* Adds some space between the image and the text */
+    background-color: #02494a;
 }
 
 .header-content h1 {
