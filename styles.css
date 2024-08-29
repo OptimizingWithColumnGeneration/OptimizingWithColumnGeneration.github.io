@@ -74,3 +74,16 @@ footer {
 .btn:hover {
     background-color: #147e80;
 }
+.header-content {
+    display: flex;
+    align-items: flex-end; /* Align the text with the bottom of the image */
+    padding: 1em; /* Optional: Adds some padding around the content */
+}
+
+.header-content img {
+    margin-right: 1em; /* Adds some space between the image and the text */
+}
+
+.header-content h1 {
+    margin: 0; /* Removes default margin to align properly with the image */
+}
