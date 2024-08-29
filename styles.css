@@ -10,7 +10,7 @@ body {
 header {
     text-align: center;
     background-color: #fff; /* Matches the white background color */
-    padding: 2em 0;
+    padding: 1em 0;
 }
 
 .book-cover {
@@ -18,7 +18,7 @@ header {
 }
 
 main {
-    padding: 2em;
+    padding: 1em;
     max-width: 800px;
     margin: 0 auto;
 }
