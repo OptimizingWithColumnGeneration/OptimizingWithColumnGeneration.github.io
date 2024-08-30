@@ -84,20 +84,24 @@ footer {
 @media (min-width: 768px) {
     .content-wrapper {
         flex-direction: row;
-        align-items: stretch; /* Ensures both book cover and sections are aligned in height */
+        align-items: stretch; /* Ensures both book cover and sections stretch to the same height */
     }
 
     .book-cover-wrapper {
-        flex: 0 0 auto; /* Allows the book cover to take the necessary width based on its height */
+        flex: 0 0 auto; /* Allows the book cover to take the necessary width */
         margin-right: 2em;
         text-align: left;
         order: 1; /* Ensure the book cover is first in desktop view */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center the book cover vertically */
     }
 
     .book-cover {
-        height: 100%; /* Makes the book cover height match the section height */
-        max-height: 100%; /* Prevents the book cover from exceeding the height of the sections */
-        width: auto; /* Adjust width to maintain aspect ratio */
+        height: 100%; /* Ensures the book cover takes the full height of the wrapper */
+        max-height: 100%; /* Prevents overflow */
+        width: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the image scales nicely within the container */
     }
 
     .sections-wrapper {
