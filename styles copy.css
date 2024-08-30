@@ -60,7 +60,6 @@ footer {
     background-color: #02494a;
     color: #f4f4f4;
 }
-
 .btn {
     display: inline-block;
     padding: 0.75em 1.5em;
@@ -75,6 +74,7 @@ footer {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    min-width: 200px; /* Set a minimum width to ensure uniformity */
 }
 
 .btn:hover {
