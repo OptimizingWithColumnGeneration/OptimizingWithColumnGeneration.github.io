@@ -7,20 +7,28 @@ body {
     line-height: 1.6;
 }
 
-header {
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-cover-wrapper {
     text-align: center;
-    background-color: #fff; /* Matches the white background color */
-    padding: 1em 0;
+    margin-bottom: 1em;
 }
 
 .book-cover {
+    width: 100%;
     max-width: 350px;
+    height: auto;
 }
 
-main {
-    padding: 1em;
-    max-width: 800px;
-    margin: 0 auto;
+.sections-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -74,30 +82,37 @@ footer {
     background-color: #147e80;
 }
 
-.header-content {
-    display: flex;
-    align-items: flex-end; /* Align the text with the bottom of the image */
-    flex-direction: row;
-    padding: 1em; /* Optional: Adds some padding around the content */
-    font-size: 1.2em;
-    font-weight: bold; 
-    letter-spacing: 0.05em;
-    color: #f4f4f4;
-    background-color: #02494a;
+@media (min-width: 768px) {
+    .content-wrapper {
+        flex-direction: row;
+    }
+
+    .book-cover-wrapper {
+        flex: 0 0 350px;
+        margin-bottom: 0;
+        margin-right: 2em;
+        text-align: left;
+    }
+
+    .sections-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .book-cover {
+        width: 100%;
+        max-width: 350px;
+    }
 }
 
-.header-content img {
-    margin-left: 2.5em; 
-    margin-right: 2.5em; /* Adds some space between the image and the text */
-    background-color: #02494a;
-    max-width: 150px;
-}
+@media (max-width: 767px) {
+    .sections-wrapper {
+        order: 1;
+    }
 
-.header-content h1 {
-    margin: 0; /* Removes default margin to align properly with the image */
-    font-size: 1.2em;
-    font-weight: bold; 
-    letter-spacing: 0.05em;
-    color: #f4f4f4;
-    background-color: #02494a;
+    .book-cover-wrapper {
+        order: 2;
+        margin-top: 1em;
+    }
 }
