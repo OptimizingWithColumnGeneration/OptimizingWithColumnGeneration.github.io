@@ -95,8 +95,8 @@ footer {
     }
 
     .book-cover {
-        /* width: 100%; */
-        max-width: 500px; /* Set max width of 500px */
+        width: 60%; /**/
+        max-width: 460px; /* Set max width of 500px */
         height: auto; /* Maintain aspect ratio */
     }
 
