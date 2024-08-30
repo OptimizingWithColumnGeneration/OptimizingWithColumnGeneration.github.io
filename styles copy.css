@@ -84,7 +84,7 @@ footer {
 @media (min-width: 768px) {
     .content-wrapper {
         flex-direction: row;
-        align-items: flex-start; /* Align items at the top */
+        align-items: center; /* Align items at the top */
     }
 
     .book-cover-wrapper {
