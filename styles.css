@@ -87,8 +87,8 @@ footer {
 }
 
 .header-content img {
-    margin-left: 3em; 
-    margin-right: 3em; /* Adds some space between the image and the text */
+    margin-left: 2.5em; 
+    margin-right: 2.5em; /* Adds some space between the image and the text */
     background-color: #02494a;
     max-width: 150px;
 }
