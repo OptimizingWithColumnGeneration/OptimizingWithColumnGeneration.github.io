@@ -7,20 +7,27 @@ body {
     line-height: 1.6;
 }
 
-header {
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-cover-wrapper {
     text-align: center;
-    background-color: #fff; /* Matches the white background color */
-    padding: 1em 0;
+    margin-bottom: 1em;
 }
 
 .book-cover {
-    max-width: 350px;
+    width: 100%;
+    height: auto;
 }
 
-main {
-    padding: 1em;
-    max-width: 800px;
-    margin: 0 auto;
+.sections-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -53,7 +60,6 @@ footer {
     background-color: #02494a;
     color: #f4f4f4;
 }
-
 .btn {
     display: inline-block;
     padding: 0.75em 1.5em;
@@ -68,36 +74,57 @@ footer {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    min-width: 200px; /* Set a minimum width to ensure uniformity */
 }
 
 .btn:hover {
     background-color: #147e80;
 }
 
-.header-content {
-    display: flex;
-    align-items: flex-end; /* Align the text with the bottom of the image */
-    flex-direction: row;
-    padding: 1em; /* Optional: Adds some padding around the content */
-    font-size: 1.2em;
-    font-weight: bold; 
-    letter-spacing: 0.05em;
-    color: #f4f4f4;
-    background-color: #02494a;
+@media (min-width: 768px) {
+    .content-wrapper {
+        flex-direction: row;
+        align-items: center; /* Align items at the top */
+    }
+
+    .book-cover-wrapper {
+        flex: 0 0 auto; /* Allows the book cover to take necessary width */
+        margin-right: 2em;
+        text-align: left;
+        order: 1; /* Ensure the book cover is first in desktop view */
+    }
+
+    .book-cover {
+        /*width: 60%; */
+        max-width: 460px; /* Set max width of 500px */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .sections-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        order: 2; /* Ensure sections come after the book cover in desktop view */
+    }
 }
 
-.header-content img {
-    margin-left: 2.5em; 
-    margin-right: 2.5em; /* Adds some space between the image and the text */
-    background-color: #02494a;
-    max-width: 150px;
-}
+@media (max-width: 767px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
 
-.header-content h1 {
-    margin: 0; /* Removes default margin to align properly with the image */
-    font-size: 1.2em;
-    font-weight: bold; 
-    letter-spacing: 0.05em;
-    color: #f4f4f4;
-    background-color: #02494a;
+    .book-cover-wrapper {
+        order: 1; /* Ensure the book cover is first in mobile view */
+        margin-bottom: 0.4em;
+    }
+
+    .sections-wrapper {
+        order: 2; /* Ensure sections come after the book cover in mobile view */
+    }
+
+    .book-cover {
+        width: 100%;
+        max-width: 350px; /* Set max width of 500px */
+        height: auto; /* Reset to auto height for mobile view */
+    }
 }
