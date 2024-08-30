@@ -1,103 +1,37 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #02494a;
-    line-height: 1.6;
-}
-
-header {
-    text-align: center;
-    background-color: #fff; /* Matches the white background color */
-    padding: 1em 0;
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
 }
 
 .book-cover {
     max-width: 350px;
+    margin-bottom: 1em; /* Space below the image */
 }
 
-main {
-    padding: 1em;
-    max-width: 800px;
-    margin: 0 auto;
-}
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 
-section {
-    background-color: #f4f4f4;
-    margin: 1em 0;
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+    .book-cover {
+        margin: 0 0 0 2em; /* Margin to the left of the image */
+        order: 2;
+    }
 
-section h2 {
-    color: #02494a;
-    margin-top: 0;
-}
+    main {
+        display: flex;
+        flex-direction: row;
+    }
 
-a {
-    color:  #f4f4f4;
-    text-decoration: none;
-}
+    main > section {
+        flex: 1;
+        margin-right: 2em;
+    }
 
-a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #02494a;
-    color: #f4f4f4;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.75em 1.5em;
-    margin: 0.5em;
-    font-size: 1.2em;
-    font-weight: bold; 
-    letter-spacing: 0.05em;
-    color: #f4f4f4;
-    background-color: #02494a;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #147e80;
-}
-
-.header-content {
-    display: flex;
-    align-items: flex-end; /* Align the text with the bottom of the image */
-    flex-direction: row;
-    padding: 1em; /* Optional: Adds some padding around the content */
-    font-size: 1.2em;
-    font-weight: bold; 
-    letter-spacing: 0.05em;
-    color: #f4f4f4;
-    background-color: #02494a;
-}
-
-.header-content img {
-    margin-left: 2.5em; 
-    margin-right: 2.5em; /* Adds some space between the image and the text */
-    background-color: #02494a;
-    max-width: 150px;
-}
-
-.header-content h1 {
-    margin: 0; /* Removes default margin to align properly with the image */
-    font-size: 1.2em;
-    font-weight: bold; 
-    letter-spacing: 0.05em;
-    color: #f4f4f4;
-    background-color: #02494a;
+    main > .header-content {
+        flex-basis: 30%;
+    }
 }
