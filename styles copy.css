@@ -115,7 +115,7 @@ footer {
 
     .book-cover-wrapper {
         order: 1; /* Ensure the book cover is first in mobile view */
-        margin-bottom: 1em;
+        margin-bottom: 0.4em;
     }
 
     .sections-wrapper {
@@ -124,6 +124,7 @@ footer {
 
     .book-cover {
         width: 100%;
+        max-width: 350px; /* Set max width of 500px */
         height: auto; /* Reset to auto height for mobile view */
     }
 }
