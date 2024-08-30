@@ -119,4 +119,11 @@ footer {
     }
 
     .sections-wrapper {
-        order: 2; /* Ensure sections come after the
+        order: 2; /* Ensure sections come after the book cover in mobile view */
+    }
+
+    .book-cover {
+        width: 100%;
+        height: auto; /* Reset to auto height for mobile view */
+    }
+}
