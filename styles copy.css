@@ -22,7 +22,6 @@ body {
 
 .book-cover {
     width: 100%;
-    max-width: 350px;
     height: auto;
 }
 
@@ -85,34 +84,39 @@ footer {
 @media (min-width: 768px) {
     .content-wrapper {
         flex-direction: row;
+        align-items: stretch; /* Ensures both book cover and sections are aligned in height */
     }
 
     .book-cover-wrapper {
-        flex: 0 0 350px;
-        margin-bottom: 0;
+        flex: 0 0 auto; /* Allows the book cover to take the necessary width based on its height */
         margin-right: 2em;
         text-align: left;
+        order: 1; /* Ensure the book cover is first in desktop view */
+    }
+
+    .book-cover {
+        height: 100%; /* Makes the book cover height match the section height */
+        max-height: 100%; /* Prevents the book cover from exceeding the height of the sections */
+        width: auto; /* Adjust width to maintain aspect ratio */
     }
 
     .sections-wrapper {
         flex: 1;
         display: flex;
         flex-direction: column;
-    }
-
-    .book-cover {
-        width: 100%;
-        max-width: 350px;
+        order: 2; /* Ensure sections come after the book cover in desktop view */
     }
 }
 
 @media (max-width: 767px) {
-    .sections-wrapper {
-        order: 1;
+    .content-wrapper {
+        flex-direction: column;
     }
 
     .book-cover-wrapper {
-        order: 2;
-        margin-top: 1em;
+        order: 1; /* Ensure the book cover is first in mobile view */
+        margin-bottom: 1em;
     }
-}
+
+    .sections-wrapper {
+        order: 2; /* Ensure sections come after the
